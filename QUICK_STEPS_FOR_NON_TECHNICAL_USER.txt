@@ -1,0 +1,27 @@
+Very simple steps
+=================
+
+First time only:
+1. Open 00_INSTALL_APP_FIRST.bat
+2. Wait until it finishes
+3. Open 02_START_APP.bat
+4. In the browser, choose Balanced - medium
+5. Click Download selected model
+6. Wait until it says the model is ready
+
+Every time after that:
+1. Open 02_START_APP.bat
+2. Upload the meeting recording
+3. Choose Arabic
+4. Click Start Transcription
+5. Download the files
+
+If GPU error happens:
+- Choose Device = CPU only
+- Choose Compute = int8
+- Try again
+
+For GPU speed:
+- Run 01_INSTALL_CUDA_12_FOR_GPU.bat once
+- Restart Windows
+- Then open 02_START_APP.bat again

@@ -1,0 +1,33 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
+
+# Local app data and generated files
+outputs/
+models/
+temp/
+tmp/
+uploads/
+downloads/
+installers/
+
+# Media inputs and temporary audio/video files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.m4a
+
+# Generated transcript/subtitle files
+*.srt
+*.txt
+!README_AR.txt
+!QUICK_STEPS_FOR_NON_TECHNICAL_USER.txt
+!CHANGELOG_V5.txt

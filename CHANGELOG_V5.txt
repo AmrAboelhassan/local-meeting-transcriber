@@ -1,0 +1,26 @@
+Version 5 changes
+=================
+
+1. Model download is now separated from transcription.
+   - Use "Download selected model" before pressing "Start Transcription".
+   - If the model is not ready, transcription will not auto-download it.
+
+2. Added "Check selected model" button.
+
+3. Added "Check GPU / CUDA" button.
+
+4. Added Python auto-install in 00_INSTALL_APP_FIRST.bat.
+
+5. Added optional CUDA 12.0 installer downloader:
+   01_INSTALL_CUDA_12_FOR_GPU.bat
+   It downloads cuda_12.0.0_527.41_windows.exe and opens the NVIDIA installer.
+
+6. Added app startup PATH fixes for pip-installed NVIDIA cuDNN/cuBLAS DLLs:
+   - nvidia-cudnn-cu12
+   - nvidia-cublas-cu12
+   - nvidia-cuda-runtime-cu12
+
+7. Removed automatic model download during transcription.
+
+8. Kept safe fallback:
+   Auto GPU then CPU can fall back to CPU if GPU libraries fail.
