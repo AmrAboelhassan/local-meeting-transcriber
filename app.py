@@ -23,8 +23,8 @@ MODEL_CACHE = {}
 
 MODEL_CHOICES = {
     "Fast - small": "small",
-    "Balanced - medium (recommended for RTX 2060)": "medium",
-    "High Quality - large-v3 (slow / may fail on 6GB VRAM)": "large-v3",
+    "Balanced - medium (recommended default)": "medium",
+    "High Quality - large-v3 (slow / needs more VRAM)": "large-v3",
 }
 
 MODEL_REPOS = {
@@ -148,7 +148,7 @@ def get_compute_value(compute_mode: str, device: str) -> str:
     if compute_mode.startswith("int8"):
         return "int8"
 
-    # Auto: safest for 6GB NVIDIA GPUs, and stable for CPU.
+    # Auto: safer for limited-VRAM NVIDIA GPUs, and stable for CPU.
     if device == "cuda":
         return "int8_float16"
     return "int8"
@@ -539,7 +539,7 @@ with gr.Blocks(title="Local Meeting Transcriber") as demo:
 
 Works with recordings from Zoom, Google Meet, Teams, lectures, interviews, or recorded calls.
 
-Recommended for RTX 2060 6GB:
+Recommended default settings:
 - Start with **Balanced - medium**
 - Device: **Auto: try GPU then CPU**
 - Compute: **Auto**
@@ -555,7 +555,7 @@ Recommended for RTX 2060 6GB:
         )
         model_size = gr.Dropdown(
             list(MODEL_CHOICES.keys()),
-            value="Balanced - medium (recommended for RTX 2060)",
+            value="Balanced - medium (recommended default)",
             label="Quality / Model",
         )
 

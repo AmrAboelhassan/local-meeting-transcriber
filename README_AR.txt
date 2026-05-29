@@ -33,7 +33,7 @@ Local Meeting Transcriber - Version 5
 داخل التطبيق:
 
 1) اختار الموديل:
-   Balanced - medium recommended for RTX 2060
+   Balanced - medium recommended default
 
 2) دوس:
    Download selected model
@@ -67,15 +67,10 @@ Local Meeting Transcriber - Version 5
 - لو أول مرة الترانسكريبت كان واقف على Downloading، ده طبيعي زمان. في النسخة دي التحميل اتفصل في زر لوحده.
 - لو GPU عمل مشكلة، التطبيق ممكن يرجع CPU تلقائيًا في Auto mode.
 - CPU أبطأ لكنه يشتغل بدون CUDA.
-- للموديل large-v3 على RTX 2060 6GB ممكن يحصل Memory Error. لو حصل استخدم medium.
+- للموديل large-v3 ممكن يحصل Memory Error على كروت الشاشة ذات الذاكرة المحدودة. لو حصل استخدم medium.
 - خلي مساحة فاضية 10-15GB على الأقل.
 
-أفضل إعدادات للجهاز المذكور:
-CPU: i7-10750H
-RAM: 16GB
-GPU: RTX 2060 6GB
-
-Recommended:
+إعدادات مقترحة كبداية لمعظم الأجهزة:
 - Model: Balanced - medium
 - Device: Auto
 - Compute: Auto
